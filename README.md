@@ -172,3 +172,106 @@ Data Sent to External Email Address
 Employee Information Appeared Online
           ↓
 Data Breach Confirmed
+````
+
+Evidence suggested that the internal email account involved in the request may have been **compromised or impersonated**. The investigation did not identify evidence of intentional malicious activity by the internal employees involved.
+
+---
+
+## Evidence Correlation
+
+The investigation relied on correlating multiple artifacts rather than relying on a single source of evidence.
+
+    Filesystem Metadata
+            │
+            ├── File creation time
+            ├── File location
+            └── File metadata
+                    │
+                    ↓
+            Confidential Spreadsheet
+                    │
+                    ↓
+            Outlook PST Archive
+                    │
+            ├── Request Email
+            ├── Response Email
+            ├── Attachment
+            └── Email Headers
+                    │
+                    ↓
+            External Transmission
+                    │
+                    ↓
+            Public Data Exposure
+
+This correlation helped establish the relationship between the original file, the email communication, external transmission, and subsequent data exposure.
+
+---
+
+## Digital Forensics Skills Demonstrated
+
+This investigation provided practical experience with:
+
+- Digital evidence examination
+- Filesystem artifact analysis
+- File metadata analysis
+- Email forensics
+- Outlook PST investigation
+- Email header analysis
+- Attachment analysis
+- Evidence correlation
+- Incident timeline reconstruction
+- Data exfiltration investigation
+- Social engineering analysis
+- Incident reporting
+- Evidence-based reasoning
+
+---
+
+## Recommendations
+
+Based on the investigation, the following security controls were identified as important:
+
+- Implement strict policies for handling and transferring sensitive information.
+- Restrict transmission of confidential data to approved communication channels.
+- Provide employees with regular **social engineering and phishing awareness training**.
+- Require verification of urgent or unusual requests for sensitive information.
+- Implement **Data Loss Prevention (DLP)** controls to monitor and prevent unauthorized data transfers.
+- Use appropriate access controls and authentication protections for organisational email accounts.
+
+---
+
+## Investigation Limitations
+
+The investigation was limited to the available evidence from a single workstation.
+
+The following limitations applied:
+
+- No server-side logs were available for correlation.
+- No network captures were available.
+- External systems could not be directly examined.
+- The identity of the external recipient could not be conclusively validated.
+- Deleted or encrypted data outside the recovered artifacts could not be examined.
+
+These limitations were considered when evaluating the certainty of the findings.
+
+---
+
+## Disclaimer
+
+This repository contains a **sanitized technical summary** of an academic digital forensics investigation.
+
+The original forensic disk image, raw Outlook PST data, extracted personal information, and other sensitive forensic artifacts are **not included** in this repository.
+
+No real-world personal data or confidential evidence should be published as part of this project.
+
+---
+
+## Project Context
+
+**Module:** Digital Forensics  
+**Assessment:** Continuous Assessment 1 (CA1)  
+**Forensic Tool:** Autopsy 4.20
+
+This project was completed as part of postgraduate cybersecurity coursework and demonstrates the application of digital forensic techniques to a simulated organisational data-breach investigation.
